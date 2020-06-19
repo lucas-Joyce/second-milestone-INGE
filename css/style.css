@@ -79,13 +79,13 @@
   }*/
 /************************************/
 body {
-  background-image: url("../images/png/PHIL-images/manila.jpg");
-  background-color: transparent;
+  background-image: url("../images/manila.jpg");
+  /* background-color: transparent;
   background-size: contain;
   background-repeat: repeat-x;
   background-position-x: center;
   background-position-y: -120px;
-  z-index: -2;
+  z-index: -2; */
 }
 nav {
   background-color: transparent;/*#202020 */

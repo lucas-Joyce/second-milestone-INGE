@@ -137,9 +137,28 @@
     <script src="https://unpkg.com/topojson@3"></script>
     <script src="https://d3js.org/d3.v5.js"></script>
     <script src="js/checkBoxEvent.js"></script>
-    <script src="js/jsTest2.js"></script>
     <script src="js/mapScriptDisplay.js"></script>
+    <script src="js/dataScriptDisplay.js"></script>
+    <script type="text/javascript">
+        // British General Election data set list.
+        var GE2010candidate     = "data/csvData/csvUK/GE2010UK/HoC-GE2010-results-by-candidate.csv";
+        var GE2010consititunecy = "data/csvData/csvUK/GE2010UK/HoC-GE2010-constituency-results.csv";
+        var GE2015candidate     = "data/csvData/csvUK/GE2015UK/HoC-GE2015-results-by-candidate.csv";
+        var GE2015consititunecy = "data/csvData/csvUK/GE2015UK/HoC-GE2015-constituency-results.csv";
+        var GE2017candidate     = "data/csvData/csvUK/GE2017UK/HoC-GE2017-results-by-candidate.csv";
+        var GE2017consititunecy = "data/csvData/csvUK/GE2017UK/HoC-GE2017-constituency-results.csv";
+        var GE2019candidate     = "data/csvData/csvUK/GE2019UK/HoC-GE2019-results-by-candidate.csv";
+        var GE2019consititunecy = "data/csvData/csvUK/GE2019UK/HoC-GE2019-constituency-results.csv";
+        var UKPop               = ""; //Population in UK.
+        var PartyResult         = "result"; // Political party represent in the consititunecy seats
+        //Philippines Presidential Election data set list.
+        var PE1998PH = "data/csvData/csvPHIL/PE1998PH/";
 
+        ukDataSet( GE2010candidate, GE2010consititunecy, GE2015candidate, GE2015consititunecy, GE2017candidate, GE2017consititunecy, GE2019candidate, GE2019consititunecy, UKPop );
+        phDataSet(  );
+        usDataSet(  );
+
+    </script>
 
 </body>
 </html>
