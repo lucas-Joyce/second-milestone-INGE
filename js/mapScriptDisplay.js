@@ -35,6 +35,8 @@ var USprojection = d3.geoAlbersUsa()
 var USpath = d3.geoPath()
     .projection(USprojection);
 
+function dataDirect(){}; // direction to dataScriptDisplay.js
+
     // Create SVG
 function secondary() { // <----- leave this part alone 
     var favorite = [];
@@ -198,19 +200,7 @@ function secondary() { // <----- leave this part alone
 //=========================================testing ground=======================================//
 
 // Parsing
-// var stateName = d3.json("data/mapData/us.json").then(function(USnameData) {
-//     generate(USnameData);
-// });
-// function generate( dataset ) {
-//     d3.select("#Nor")
-//         .selectAll("p")
-//         .data( dataset )
-//         .enter()
-//         .append("p")
-//         .text();
-// };
 
-//parseInt(d[]);d.properties.
 
 
 
