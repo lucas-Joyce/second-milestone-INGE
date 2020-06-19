@@ -89,7 +89,7 @@ body {
 }
 nav {
   background-color: transparent;/*#202020 */
-  height: 8vh;
+  height: 40px;
 }
 section {
   /*display:none;*/
@@ -99,8 +99,8 @@ section {
   background-color: transparent;/*#202020 */
 }
 .mainMapDisplayA {
-  background-color: cadetblue;
-  height: 50vh;/**/
+  background-color: #5f9ea09c;
+  /*height: 50vh;*/
   width: -webkit-fill-available;
 }
 .displayBtabs {
@@ -108,20 +108,21 @@ section {
   /*height: 42vh;*/
 }
 .displayB {
-  background-color: darkorchid;
-  display: flex;
+  background-color: #9932cc;
+  /*display: flex;*/
   align-items: stretch;
   height: 35vh;
   padding-left: 0px;
   padding-right: 0px;
+  display: none;
 }
 .mainChartDisplayBleft {
-  background-color: cyan;
+  background-color: #00ffff;
   display: flex;
   align-items: stretch;
 }
 .mainChartDisplayBright {
-  background-color: darkcyan;
+  background-color: #008b8b;
 }
 .mainAutoDisplayC {
 /*background-color: rgba(238, 148, 4, 0.452);*/
@@ -151,7 +152,7 @@ section {
 
 /* **************** TABS *************** */
 .nav-tabs>li>a {
-background-color: rgba(95, 158, 160, 0.4)
+background-color: #5f9ea066
 }
 .nav>li>a {
   padding: 4px 15px;
@@ -186,7 +187,7 @@ background-color: #647677;
 .card {
   position: relative;
   z-index: 5;
-  background-color: yellowgreen;
+  background-color: #9acd32;
   display: inline-table;
   flex-flow: row;
   width: 300px;
@@ -200,6 +201,16 @@ background-color: #647677;
 .asteriskGreen {
   height: 20px;
   width: 20px;
-  color: greenyellow;
+  color: #adff2f;
 }
-/* */
+ 
+
+#Nor {
+  /*width: 800px;
+  height: 1000px;*/
+  background-color: transparent;
+  margin: 8px;
+}
+  ul {
+    list-style-type: none;
+}
