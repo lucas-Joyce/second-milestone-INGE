@@ -15,6 +15,9 @@ $(document).ready(function(){
     //     }, 1500 );
     
     // }
+/* ========================== varibles tables ====================== */
+//N/A
+
 /* ================= select country button ========================== */
     $("#countryBtn").click(function() {
         $("#countryList").fadeToggle(250);
@@ -47,7 +50,7 @@ $(document).ready(function(){
             $("#ukGeneralElectionB").addClass("offB");
         } else { 
             $(this).is(":not(:checked)");
-            $('input[type=checkbox]').prop('checked',false);
+            $('input[type=radio]').prop('checked',false);
             $("#finishCountryListA > p").remove();
             $("#finishElectionListA1 > p").remove();
             $("#finishElectionListA2 > p").remove();
@@ -67,11 +70,11 @@ $(document).ready(function(){
     });
 
 /* ================= select only one country (S)========================== */
-$('input:checkbox[name="countryA"]').on("click", function() {
+$('input:radio[name="countryA"]').on("click", function() {
     var boxA = $(this);
     if (boxA.is(":checked")) {
-        var groupA = "input:checkbox[name='" + boxA.attr("name") + "']";
-        $(groupA).prop("checked", false);
+        var groupA = "input:radio[name='" + boxA.attr("name") + "']";
+       $(groupA).prop("checked", false);
         boxA.prop("checked", true);
         $("input[name='electionA']").prop('checked', false);
         $("#finishElectionListA1 > p").remove();
@@ -81,10 +84,10 @@ $('input:checkbox[name="countryA"]').on("click", function() {
         
     }
 });
-$('input:checkbox[name="countryB"]').on("click", function() {
+$('input:radio[name="countryB"]').on("click", function() {
     var boxB = $(this);
     if (boxB.is(":checked")) {
-        var groupB = "input:checkbox[name='" + boxB.attr("name") + "']";
+        var groupB = "input:radio[name='" + boxB.attr("name") + "']";
         $(groupB).prop("checked", false);
         boxB.prop("checked", true);
         $("input[name='electionB']").prop('checked', false);
@@ -98,13 +101,15 @@ $('input:checkbox[name="countryB"]').on("click", function() {
 /* ==== country enable and disabled checkbox ====== */
 $('input[id="inputUkDisplayA"]').click(function() {
     if ($(this).is(":checked")){
-        $('input:checkbox[name="countryB"]').prop("checked", false);
+        $('input:radio[name="countryB"]').prop("checked", false);
         $("#inputPhilDisplayB").prop("disabled", false);
         $("#inputUsaDisplayB").prop("disabled", false);
         $("#inputUkDisplayB").prop("disabled", true);
+        $("#inputUkDisplayB").prop("checked", false);
         $("#finishCountryListA > p").remove();
         $("#finishCountryListA").append("<p>" + ($("#inputUkDisplayA").val()) + "</p>");
         //$("#finishButtonDisplay").slideDown(250);
+        csvCall();
     } else { 
         $(this).is(":not(:checked)");
         $("#inputUkDisplayB").prop("disabled", false);
@@ -115,13 +120,15 @@ $('input[id="inputUkDisplayA"]').click(function() {
 });
 $('input[id="inputUsaDisplayA"]').click(function() {
     if ($(this).is(":checked")){
-        $('input:checkbox[name="countryB"]').prop("checked", false);
+        $('input:radio[name="countryB"]').prop("checked", false);
         $("#inputPhilDisplayB").prop("disabled", false);
         $("#inputUsaDisplayB").prop("disabled", true);
         $("#inputUkDisplayB").prop("disabled", false);
+        $("#inputUsaDisplayB").prop("checked", false);
         $("#finishCountryListA > p").remove();
         $("#finishCountryListA").append("<p>" + ($("#inputUsaDisplayA").val()) + "</p>");
         //$("#finishButtonDisplay").slideDown(250);
+        csvCall();
     } else if ($(this).is(":not(:checked)")) {
         $("#inputUsaDisplayB").prop("disabled", false);
         $("#finishCountryListA > p").remove();
@@ -131,13 +138,15 @@ $('input[id="inputUsaDisplayA"]').click(function() {
 });
 $('input[id="inputPhilDisplayA"]').click(function() {
     if ($(this).is(":checked")){
-        $('input:checkbox[name="countryB"]').prop("checked", false);
+        $('input:radio[name="countryB"]').prop("checked", false);
         $("#inputPhilDisplayB").prop("disabled", true);
         $("#inputUsaDisplayB").prop("disabled", false);
         $("#inputUkDisplayB").prop("disabled", false);
+        $("#inputPhilDisplayB").prop("checked", false);
         $("#finishCountryListA > p").remove();
         $("#finishCountryListA").append("<p>" + ($("#inputPhilDisplayA").val()) + "</p>");
        // $("#finishButtonDisplay").slideDown(250);
+       csvCall();
     } else if ($(this).is(":not(:checked)")) {
         $("#inputPhilDisplayB").prop("disabled", false);
         $("#finishCountryListA > p").remove();
@@ -147,9 +156,11 @@ $('input[id="inputPhilDisplayA"]').click(function() {
 });
 $('input[id="inputUkDisplayB"]').click(function() {
     if ($(this).is(":checked")){
+        $("#inputUkDisplayA").prop("checked", false);
         $("#finishCountryListB > p").remove();
         $("#finishCountryListB").append("<p>" + ($("#inputUkDisplayB").val()) + "</p>");
         //$("#finishButtonDisplay").slideDown(250);
+        csvCall();
     } else if ($(this).is(":not(:checked)")) {
         $("#finishCountryListB > p").remove();
         //$('input[type=checkbox]').prop('checked',false);- do not use
@@ -158,9 +169,11 @@ $('input[id="inputUkDisplayB"]').click(function() {
 });
 $('input[id="inputUsaDisplayB"]').click(function() {
     if ($(this).is(":checked")){
+        $("#inputUsaDisplayA").prop("checked", false);
         $("#finishCountryListB > p").remove();
         $("#finishCountryListB").append("<p>" + ($("#inputUsaDisplayB").val()) + "</p>");
         //$("#finishButtonDisplay").slideDown(250);
+        csvCall();
     } else if ($(this).is(":not(:checked)")) {
         $("#finishCountryListB > p").remove();
         //$('input[type=checkbox]').prop('checked',false);- do not use
@@ -169,9 +182,11 @@ $('input[id="inputUsaDisplayB"]').click(function() {
 });
 $('input[id="inputPhilDisplayB"]').click(function() {
     if ($(this).is(":checked")){
+        $("#inputPhilDisplayA").prop("checked", false);
         $("#finishCountryListB > p").remove();
         $("#finishCountryListB").append("<p>" + ($("#inputPhilDisplayB").val()) + "</p>");
         //$("#finishButtonDisplay").slideDown(250);
+        csvCall();
     } else if ($(this).is(":not(:checked)")) {
         $("#finishCountryListB > p").remove();
         //$('input[type=checkbox]').prop('checked',false); - do not use
@@ -255,6 +270,8 @@ $('input[id="inputPhilDisplayB"]').click(function() {
         $('input:checkbox[name="electionA"]').is(":checked")) {
         $("#finishButtonDisplay").slideDown(250);
     } else {
+        $("#finishElectionListA1 > p").remove();
+        $("#finishElectionListA2 > p").remove();
         $("#finishButtonDisplay").slideUp(250);
     };
 });
@@ -278,25 +295,52 @@ $('input[id="inputPhilDisplayB"]').click(function() {
         });
 
 
+// $('input[name="electionA"]').click(function () {
+//     var firstBoxA = 1;
+//     var secondBoxA = 2;
+//     var eaLen = $("input[name='electionA']:checked").length;
+//     var box = ("<p>" + ($(this).val()) + "</p>");
+//     if (eaLen === secondBoxA) {
+//         $(this).prop("checked", true);
+//         $("#finishElectionListA2 > p").remove();
+//         $("#finishElectionListA2").append(box);
+//     } else if (eaLen === firstBoxA) {
+//         $(this).prop(":checked", true); 
+//         $("#finishElectionListA1 > p").remove();
+//         $("#finishElectionListA2 > p").remove();
+//         $("#finishElectionListA1").append(box);
+//     } else {
+//         $("#finishElectionListA1 > p").remove();
+//         $("#finishElectionListA2 > p").remove();
+//         }
+// }); do not move
+
 $('input[name="electionA"]').click(function () {
     var firstBoxA = 1;
     var secondBoxA = 2;
     var eaLen = $("input[name='electionA']:checked").length;
     var box = ("<p>" + ($(this).val()) + "</p>");
-    if (eaLen === secondBoxA) {
-        $(this).prop("checked", true);
-        $("#finishElectionListA2 > p").remove();
-        $("#finishElectionListA2").append(box);
-    } else if (eaLen === firstBoxA) {
-        $(this).prop(":checked", true); 
-        $("#finishElectionListA1 > p").remove();
-        $("#finishElectionListA2 > p").remove();
-        $("#finishElectionListA1").append(box);
-    } else {
-        $("#finishElectionListA1 > p").remove();
-        $("#finishElectionListA2 > p").remove();
+    if (eaLen === firstBoxA) {
+        if($(this).is(":checked")){
+            $("#finishElectionListA1").append(box);
+            //console.log("first-hello");
         }
+        if(!$(this).is(":checked")){
+            $("#finishElectionListA2 > p").remove();
+            //console.log("removed");
+        }
+    } else if (eaLen === secondBoxA) {
+            $("#finishElectionListA2 > p").remove();
+            $("#finishElectionListA2").append(box);
+            //console.log("second-hello");
+    } //else {                                      //// this is not needed.
+    //     $("#finishElectionListA1 > p").remove(); 
+    //     $("#finishElectionListA2 > p").remove();
+    //     }
 });
+
+
+
 $('input[name="electionB"]').click(function () {
     var firstBoxB = 1;
     var secondBoxB = 2;
@@ -311,27 +355,29 @@ $('input[name="electionB"]').click(function () {
         $("#finishElectionListB1 > p").remove();
         $("#finishElectionListB2 > p").remove();
         $("#finishElectionListB1").append(box);
-    } else {
-        $("#finishElectionListB1 > p").remove();
-        $("#finishElectionListB2 > p").remove();
-        }
+    } //else {                                      //// this is not needed.
+        // $("#finishElectionListB1 > p").remove();
+        // $("#finishElectionListB2 > p").remove();
+        // }
 });
 $("input[name='electionA']").click("click", function() {
     var max1 = 1;
     var max2 = 2;
     var EA = $("input[name='electionA']:checked").length;
 
-if ($('input[id="extraCompareSwitch"]').is(":checked")){
-if (EA > max2) { 
-    $("input[name='electionA']:checked").prop("checked", "");
-    alert('You can only select ' + max2 + ' options!!');
-};
-} else {
-if (EA > max1) { 
-    $("input[name='electionA']:checked").prop("checked", "");
-    alert('You can only select ' + max1 + ' options!!');
-};
-};
+    if ($('input[id="extraCompareSwitch"]').is(":checked")){
+        if (EA > max2) { 
+            $(this).prop("checked","");
+            alert('You can only select ' + max2 + ' options!!');
+        };
+        } else {
+        if (EA > max1) { 
+            $(this).prop("checked","");
+            alert('You can only select ' + max1 + ' options!!');
+            //$("#finishElectionListA1 > p").remove();
+            $("#finishElectionListA2 > p").remove();
+        };
+    };
 });
 $("input[name='electionB']").click("click", function() {
     var max1 = 1;
@@ -362,7 +408,7 @@ $("#finalSubmit").click(function(){
             $("#electionYearDisplayB-HR").slideUp(250); 
             $("#electionYearDisplayB" ).slideUp(250);
             $("#finishButtonDisplay").slideUp(250);
-            secondary();
+            createSVGmap();
         }
 
     if ($("#compareSwitch:checkbox").is(":checked")) {
@@ -405,11 +451,12 @@ $("#finalSubmit").click(function(){
 
             };
     };
-
+    //ukDataSet();
 });
 // $("#finalSubmit").click(function primary () {
 //    secondary();
 // });
+// ukDataSet();
 
 
 

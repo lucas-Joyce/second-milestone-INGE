@@ -9,9 +9,16 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/home/ob.jpg" /> <!-- ICON TAB -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/style.css"  type="text/css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script> -->
+    <script type="text/javascript" src="data/cdnData/Chart.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="data/cdnData/Chart.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>I.N.G.E</title>
 </head>
 <body>
@@ -26,15 +33,15 @@
                     <input class="switch" type="checkbox" id="compareSwitch">
                     <h3>Country</h3>
                     <ul id="countryListA" >
-                        <li id="ukDisplayA"><a href="#ukGeneralElectionA">UK</a><input class="countryButton countryButtonA" id="inputUkDisplayA" type="checkbox" value="UK" name="countryA"></li>
-                        <li id="usaDisplayA"><a href="#usPresidentialElectionA">USA</a><input class="countryButton countryButtonA" id="inputUsaDisplayA" type="checkbox" value="USA" name="countryA"></li>
-                        <li id="philDisplayA"><a href="#philippinesElectionA">Philippines</a><input class="countryButton countryButtonA" id="inputPhilDisplayA" type="checkbox" value="Philippines" name="countryA"></li>
+                        <li id="ukDisplayA"><a href="#ukGeneralElectionA">UK</a><input class="countryButton countryButtonA" id="inputUkDisplayA" type="radio" value="UK" name="countryA"></li>
+                        <li id="usaDisplayA"><a href="#usPresidentialElectionA">USA</a><input class="countryButton countryButtonA" id="inputUsaDisplayA" type="radio" value="USA" name="countryA"></li>
+                        <li id="philDisplayA"><a href="#philippinesElectionA">Philippines</a><input class="countryButton countryButtonA" id="inputPhilDisplayA" type="radio" value="Philippines" name="countryA"></li>
                     </ul>
                     <hr id="countryListB-HR" class="offB">
                     <ul id="countryListB" class="offB">
-                        <li id="ukDisplayB"><a href="#ukGeneralElectionB">UK</a><input  class="countryButton countryButtonB" id="inputUkDisplayB" type="checkbox" value="UK" name="countryB"></li>
-                        <li id="usaDisplayB"><a href="#usPresidentialElectionB">USA</a><input class="countryButton  countryButtonB" id="inputUsaDisplayB" type="checkbox" value="USA" name="countryB"></li>
-                        <li id="philDisplayB"><a href="#philippinesElectionB">Philippines</a><input class="countryButton  countryButtonB" id="inputPhilDisplayB" type="checkbox" value="Philippines" name="countryB"></li>
+                        <li id="ukDisplayB"><a href="#ukGeneralElectionB">UK</a><input  class="countryButton countryButtonB" id="inputUkDisplayB" type="radio" value="UK" name="countryB"></li>
+                        <li id="usaDisplayB"><a href="#usPresidentialElectionB">USA</a><input class="countryButton  countryButtonB" id="inputUsaDisplayB" type="radio" value="USA" name="countryB"></li>
+                        <li id="philDisplayB"><a href="#philippinesElectionB">Philippines</a><input class="countryButton  countryButtonB" id="inputPhilDisplayB" type="radio" value="Philippines" name="countryB"></li>
                     </ul>
                 </form>
                 <!-- Election Year showList-->
@@ -44,43 +51,43 @@
                     <h3>Election Year</h3>
                     <div id="electionYearDisplayA">
                         <ul id="ukGeneralElectionA">
-                            <li><a href="#">2019 General Election</a><input class="electionButtonA" id="2019GEA" value="2019 General Election" type="checkbox" name="electionA" ></li>
-                            <li><a href="#">2017 General Election</a><input class="electionButtonA" id="2017GEA" value="2017 General Election" type="checkbox" name="electionA" ></li>
-                            <li><a href="#">2015 General Election</a><input class="electionButtonA" id="2015GEA" value="2015 General Election" type="checkbox" name="electionA" ></li>
-                            <li><a href="#">2010 General Election</a><input class="electionButtonA" id="2010GEA" value="2010 General Election" type="checkbox" name="electionA" ></li>
+                            <li><a >2019 General Election </a><input class="electionButtonA" id="GE2019A" value="2019 General Election" type="checkbox" name="electionA" ></li>
+                            <li><a >2017 General Election </a><input class="electionButtonA" id="GE2017A" value="2017 General Election" type="checkbox" name="electionA" ></li>
+                            <li><a >2015 General Election </a><input class="electionButtonA" id="GE2015A" value="2015 General Election" type="checkbox" name="electionA" ></li>
+                            <li><a >2010 General Election </a><input class="electionButtonA" id="GE2010A" value="2010 General Election" type="checkbox" name="electionA" ></li>
                         </ul>
                         <ul id="usPresidentialElectionA">
-                            <li><a href="#">2020 Presidential Election</a><input class="electionButtonA" id="2020PEA" value="2020 Presidential Election" type="checkbox" name="electionA"></li>
-                            <li><a href="#">2016 Presidential Election</a><input class="electionButtonA" id="2016PEA" value="2016 Presidential Election" type="checkbox" name="electionA"></li>
-                            <li><a href="#">2012 Presidential Election</a><input class="electionButtonA" id="2012PEA" value="2012 Presidential Election" type="checkbox" name="electionA"></li>
-                            <li><a href="#">2008 Presidential Election</a><input class="electionButtonA" id="2008PEA" value="2008 Presidential Election" type="checkbox" name="electionA"></li>
+                            <li><a href="#">2020 Presidential Election</a><input class="electionButtonA" id="UE2020A" value="2020 Presidential Election" type="checkbox" name="electionA"></li>
+                            <li><a href="#">2016 Presidential Election</a><input class="electionButtonA" id="UE2016A" value="2016 Presidential Election" type="checkbox" name="electionA"></li>
+                            <li><a href="#">2012 Presidential Election</a><input class="electionButtonA" id="UE2012A" value="2012 Presidential Election" type="checkbox" name="electionA"></li>
+                            <li><a href="#">2008 Presidential Election</a><input class="electionButtonA" id="UE2008A" value="2008 Presidential Election" type="checkbox" name="electionA"></li>
                         </ul>
                         <ul id="philippinesElectionA">
-                            <li><a href="#">2016 Presidential Election</a><input class="electionButtonA" id="2016PPEA" value="2016 Presidential Election" type="checkbox" name="electionA"></li>
-                            <li><a href="#">2010 Presidential Election</a><input class="electionButtonA" id="2010PPEA" value="2010 Presidential Election" type="checkbox" name="electionA"></li>
-                            <li><a href="#">2004 Presidential Election</a><input class="electionButtonA" id="2004PPEA" value="2004 Presidential Election" type="checkbox" name="electionA"></li>
-                            <li><a href="#">1998 Presidential Election</a><input class="electionButtonA" id="1998PPEA" value="1998 Presidential Election" type="checkbox" name="electionA"></li>
+                            <li><a href="#">2016 Presidential Election</a><input class="electionButtonA" id="PE2016A" value="2016 Presidential Election" type="checkbox" name="electionA"></li>
+                            <li><a href="#">2010 Presidential Election</a><input class="electionButtonA" id="PE2010A" value="2010 Presidential Election" type="checkbox" name="electionA"></li>
+                            <li><a href="#">2004 Presidential Election</a><input class="electionButtonA" id="PE2004A" value="2004 Presidential Election" type="checkbox" name="electionA"></li>
+                            <li><a href="#">1998 Presidential Election</a><input class="electionButtonA" id="PE1998A" value="1998 Presidential Election" type="checkbox" name="electionA"></li>
                         </ul>
                     </div>
                     <hr id="electionYearDisplayB-HR" class="offB">
                     <div id="electionYearDisplayB" class="offB">
                         <ul id="ukGeneralElectionB">
-                            <li><a href="#">2019 General Election</a><input class="electionButtonB" id="2019GEB" value="2019 General Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">2017 General Election</a><input class="electionButtonB" id="2017GEB" value="2017 General Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">2015 General Election</a><input class="electionButtonB" id="2015GEB" value="2015 General Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">2010 General Election</a><input class="electionButtonB" id="2010GEB" value="2010 General Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2019 General Election</a><input class="electionButtonB" id="GE2019B" value="2019 General Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2017 General Election</a><input class="electionButtonB" id="GE2017B" value="2017 General Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2015 General Election</a><input class="electionButtonB" id="GE2015B" value="2015 General Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2010 General Election</a><input class="electionButtonB" id="GE2010B" value="2010 General Election" type="checkbox" name="electionB"></li>
                         </ul>
                         <ul id="usPresidentialElectionB">
-                            <li><a href="#">2020 Presidential Election</a><input class="electionButtonB" id="2020PEB" value="2020 Presidential Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">2016 Presidential Election</a><input class="electionButtonB" id="2016PEB" value="2016 Presidential Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">2012 Presidential Election</a><input class="electionButtonB" id="2012PEB" value="2012 Presidential Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">2008 Presidential Election</a><input class="electionButtonB" id="2008PEB" value="2008 Presidential Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2020 Presidential Election</a><input class="electionButtonB" id="UE2020B" value="2020 Presidential Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2016 Presidential Election</a><input class="electionButtonB" id="UE2016B" value="2016 Presidential Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2012 Presidential Election</a><input class="electionButtonB" id="UE2012B" value="2012 Presidential Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2008 Presidential Election</a><input class="electionButtonB" id="UE2008B" value="2008 Presidential Election" type="checkbox" name="electionB"></li>
                         </ul>
                         <ul id="philippinesElectionB">
-                            <li><a href="#">2016 Presidential Election</a><input class="electionButtonB" id="2016PPEB" value="2016 Presidential Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">2010 Presidential Election</a><input class="electionButtonB" id="2010PPEB" value="2010 Presidential Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">2004 Presidential Election</a><input class="electionButtonB" id="2004PPEB" value="2004 Presidential Election" type="checkbox" name="electionB"></li>
-                            <li><a href="#">1998 Presidential Election</a><input class="electionButtonB" id="1998PPEB" value="1998 Presidential Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2016 Presidential Election</a><input class="electionButtonB" id="PE2016B" value="2016 Presidential Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2010 Presidential Election</a><input class="electionButtonB" id="PE2010B" value="2010 Presidential Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">2004 Presidential Election</a><input class="electionButtonB" id="PE2004B" value="2004 Presidential Election" type="checkbox" name="electionB"></li>
+                            <li><a href="#">1998 Presidential Election</a><input class="electionButtonB" id="PE1998B" value="1998 Presidential Election" type="checkbox" name="electionB"></li>
                         </ul>
                     </div>
                 </form>
@@ -118,12 +125,15 @@
         <div class="displayBtabs col-md-9">
             <ul class="nav nav-tabs list-inline">
                 <!-- this is a Tabs for display B-->
-                <li class="active"><a data-toggle="tab" href="#">Pie Chart</a></li>
-                <li><a data-toggle="tab" href="#">Half-Doughnut</a></li>
-                <li><a data-toggle="tab" href="#">Bar Chart</a></li>
+                <li class="active"><a data-toggle="tab" href="#myChart">Pie Chart</a></li>
+                <li><a data-toggle="tab" href="#dough">Half-Doughnut</a></li>
+                <li><a data-toggle="tab" href="#barChart">Bar Chart</a></li>
             </ul>
             <div class="displayB col-md-12">
-                <div class="mainChartDisplayBleft col-md-6">B Left Display</div>
+                <div class="chart-container" style="position: relative; height:30vh; width:60vw">
+                <canvas id="myChart" width="400" height="400" class="mainChartDisplayBleft col-md-6 tab-pane fade in active" aria-label="bar-chart" role="img"></canvas></div>
+                <div id="dough" class="mainChartDisplayBleft col-md-6 tab-pane fade"></div>
+                <div id="barChart" class="mainChartDisplayBleft col-md-6 tab-pane fade"></div>
                 <div class="mainChartDisplayBright col-md-6">B Right Display</div>
             </div>
         </div>
@@ -136,29 +146,30 @@
 
     <script src="https://unpkg.com/topojson@3"></script>
     <script src="https://d3js.org/d3.v5.js"></script>
-    <script src="js/checkBoxEvent.js"></script>
-    <script src="js/mapScriptDisplay.js"></script>
-    <script src="js/dataScriptDisplay.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script><!-- This is Google chart graphics -->
+    <script type="text/javascript" src="js/checkBoxEvent.js"></script>
+    <script type="text/javascript" src="js/mapScriptDisplay.js"></script>
+    <script type="text/javascript" src="js/dataScriptDisplay.js"></script>
+    <script src="js/basicWorkingOnCsv.js"></script>
+    <!-- <script type="text/javascript">
         // British General Election data set list.
-        var GE2010candidate     = "data/csvData/csvUK/GE2010UK/HoC-GE2010-results-by-candidate.csv";
-        var GE2010consititunecy = "data/csvData/csvUK/GE2010UK/HoC-GE2010-constituency-results.csv";
-        var GE2015candidate     = "data/csvData/csvUK/GE2015UK/HoC-GE2015-results-by-candidate.csv";
+        var GE2010candidate     = "data/csvData/csvUK/GE2010UK/GE2010-candidate.csv";//update this changes
+        var GE2010consititunecy = "data/csvData/csvUK/GE2010UK/GE2010-constituency.csv";
+        var GE2015candidate     = "data/csvData/csvUK/GE2015UK/HoC-GE2015-results-by-candidate.csv";//old 
         var GE2015consititunecy = "data/csvData/csvUK/GE2015UK/HoC-GE2015-constituency-results.csv";
         var GE2017candidate     = "data/csvData/csvUK/GE2017UK/HoC-GE2017-results-by-candidate.csv";
         var GE2017consititunecy = "data/csvData/csvUK/GE2017UK/HoC-GE2017-constituency-results.csv";
-        var GE2019candidate     = "data/csvData/csvUK/GE2019UK/HoC-GE2019-results-by-candidate.csv";
-        var GE2019consititunecy = "data/csvData/csvUK/GE2019UK/HoC-GE2019-constituency-results.csv";
+        var GE2019candidate     = "data/csvData/csvUK/GE2019UK/GE2019-candidate.csv";
+        var GE2019consititunecy = "data/csvData/csvUK/GE2019UK/GE2019-constituency.csv";
         var UKPop               = ""; //Population in UK.
         var PartyResult         = "result"; // Political party represent in the consititunecy seats
         //Philippines Presidential Election data set list.
-        var PE1998PH = "data/csvData/csvPHIL/PE1998PH/";
-
-        ukDataSet( GE2010candidate, GE2010consititunecy, GE2015candidate, GE2015consititunecy, GE2017candidate, GE2017consititunecy, GE2019candidate, GE2019consititunecy, UKPop );
-        phDataSet(  );
-        usDataSet(  );
-
-    </script>
-
+        var PE1998PH = "data/csvData/csvPHIL/";
+    
+        //ukDataSet( GE2010candidate, GE2010consititunecy, GE2015candidate, GE2015consititunecy, GE2017candidate, GE2017consititunecy, GE2019candidate, GE2019consititunecy, UKPop, PartyResult );//
+        // //phDataSet(  );
+        //usDataSet(  );
+    
+    </script> -->
 </body>
 </html>

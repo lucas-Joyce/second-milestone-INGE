@@ -35,10 +35,10 @@ var USprojection = d3.geoAlbersUsa()
 var USpath = d3.geoPath()
     .projection(USprojection);
 
-function dataDirect(){}; // direction to dataScriptDisplay.js
+//dataDirect(); // direction to dataScriptDisplay.js
 
     // Create SVG
-function secondary() { // <----- leave this part alone 
+function createSVGmap() { // <----- leave this part alone 
     var favorite = [];
     $("input[name='countryA']:checked").each(function() {            
         favorite.push($(this).val());
@@ -46,33 +46,55 @@ function secondary() { // <----- leave this part alone
 
     if( document.getElementById("inputUkDisplayA").value == favorite) {
         $("#Nor").empty();
+        
         var svgUK = d3.select("#Nor")
                 .append("svg")
                 .attr("width", width)
                 .attr("height", height);
-        d3.json("data/mapData/westminsteratwgs84.json").then(function( UKdata){
-        var shires = topojson.feature(UKdata, UKdata.objects.Westminster_Parliamentary_Constituencies__December_2017__UK_BSC);
+        d3.json("data/mapData/westminsteratwgs84.json").then(function( UKdata ){
+         var shires = topojson.feature(UKdata, UKdata.objects.Westminster_Parliamentary_Constituencies__December_2017__UK_BSC);
+ 
+         //     d3.csv(GE2019consititunecy).then( function( csvUkData ){
+        //                             //console.log( csvUkData);
+        //         shires.features.forEach( function (e, i){
+        //             csvUkData.forEach(function(f, j) {
+        //             if (e.properties.PCON17NM !== f.constituency_name ) {
+        //                  return null;
+        //             }
+        //             //shires.features = csvUkData[i].result 
+        //             //var thisUk = csvUkData[i].result;
+        //             //console.log(csvUkData[i].result);
+        //             //console.log(shires.features[i].properties)
+        //         //console.log(f.constituency_name, f.result );
+        //         //  });
+        // //     });
+        // // });
+        //ukDataSet();
+         
         var svgUKmap = svgUK.append("g").attr("class","svgUKmap");
+                
         svgUKmap.selectAll("path")
-                .data(shires.features)
+                .data(shires.features )
                 .enter()
                 .append("path")
-                .attr("shires", function(d){
-                    return d.properties.PCON17NM;
-                })
+                .attr("class", "mcb")
+                .attr("shires", function(d){return d.properties.PCON17NM;} )
+                //.attr("partyResult", function(d){return d;})// problem issue to display--how??
                 .attr("d", UKpath )
                 .style("fill", "#d5fcbc")
                 .style( "stroke", "#000")
                 .style("stroke-width", "0.5px")
                 .on("mouseover", function(d,i){
-                    //console.log(d.properties.PCON17NM);
                     $(".shiresName").text($(this).attr("shires"));
+                    //$(".partyName").text($(this).attr("partyResult"));
                     $(this).css("fill", "#ff0000");
+                    
                 })
                 .on("mouseout", function(d,i){
                     $(this).css("fill", "#d5fcbc");
                 });
         });
+        
         var boxGroup = svgUK.append("g")
                 .attr("transform","translate(10,200)");
         boxGroup.append("text") 
@@ -84,8 +106,15 @@ function secondary() { // <----- leave this part alone
                 .attr("x", 0)
                 .attr("y", 70)
                 .attr("class","shiresName")
-                .text(" ");
-
+                .text("s");
+        boxGroup.append("text") 
+                .attr("x", 0)
+                .attr("y", 100)
+                .attr("class","partyName")
+                .text("p");
+    //         });
+    //     });
+    // });  
 } else if (document.getElementById("inputPhilDisplayA").value == favorite) {
         $("#Nor").empty();
 

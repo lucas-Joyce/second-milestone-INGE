@@ -109,12 +109,12 @@ section {
 }
 .displayB {
   background-color: #9932cc;
-  /*display: flex;*/
+  display: flex;
   align-items: stretch;
   height: 35vh;
   padding-left: 0px;
   padding-right: 0px;
-  display: none;
+  /* display: none; */
 }
 .mainChartDisplayBleft {
   background-color: #00ffff;
@@ -135,7 +135,7 @@ section {
   position: relative;
   overflow: hidden;
 }
-/*.mainAutoDisplayC:before {
+/* .mainAutoDisplayC:before {
   content: "";
   position: absolute;
   top: -63%;
@@ -147,7 +147,7 @@ section {
   transform: rotate(90deg);
   background-size: contain;
   background-position: top;
-}*/
+} */
 
 
 /* **************** TABS *************** */
@@ -201,7 +201,7 @@ background-color: #647677;
 .asteriskGreen {
   height: 20px;
   width: 20px;
-  color: #adff2f;
+  color: #ffa600;
 }
  
 
@@ -214,3 +214,4 @@ background-color: #647677;
   ul {
     list-style-type: none;
 }
+
