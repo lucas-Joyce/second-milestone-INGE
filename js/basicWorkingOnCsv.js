@@ -63,13 +63,17 @@ $(".electionButtonA").click(function(){
         // console.log("data/csvData/" + pickCsvA + "/"+ pickDateA1 +"-candidate.csv");
         // console.log("data/csvData/" + pickCsvA + "/"+ pickDateA2 +"-constituency.csv");                     // keep this 
         // console.log("data/csvData/" + pickCsvA + "/"+ pickDateA2 +"-candidate.csv");
-
-    d3.csv("data/csvData/" + pickCsvA + "/" + pickDateA1 + "-constituency.csv").then(makeConstituencyA1),
-    d3.csv("data/csvData/" + pickCsvA + "/"+ pickDateA1 +"-candidate.csv").then(makeCandidateA1);
-
-    d3.csv("data/csvData/" + pickCsvA + "/" + pickDateA2 + "-constituency.csv").then(makeConstituencyA2),
-    d3.csv("data/csvData/" + pickCsvA + "/"+ pickDateA2 +"-candidate.csv").then(makeCandidateA2);
+    if ($('input[id="extraCompareSwitch"]').is(":checked")){
+        d3.csv("data/csvData/" + pickCsvA + "/" + pickDateA1 + "-constituency.csv").then(makeConstituencyA1),
+        d3.csv("data/csvData/" + pickCsvA + "/"+ pickDateA1 +"-candidate.csv").then(makeCandidateA1);
+        d3.csv("data/csvData/" + pickCsvA + "/" + pickDateA2 + "-constituency.csv").then(makeConstituencyA2),
+        d3.csv("data/csvData/" + pickCsvA + "/"+ pickDateA2 +"-candidate.csv").then(makeCandidateA2);
+    } else {
+        d3.csv("data/csvData/" + pickCsvA + "/" + pickDateA1 + "-constituency.csv").then(makeConstituencyA1),
+        d3.csv("data/csvData/" + pickCsvA + "/"+ pickDateA1 +"-candidate.csv").then(makeCandidateA1);
+    };
 });
+
 var infoCheckedB1andB2 = [];
 $(".electionButtonB").click(function(){  
     var checked = $(this).attr('id').substring(6,-1);
@@ -91,11 +95,15 @@ $(".electionButtonB").click(function(){
         // console.log("data/csvData/" + pickCsvB + "/"+ pickDateB1 +"-candidate.csv");
         // console.log("data/csvData/" + pickCsvB + "/"+ pickDateB2 +"-constituency.csv");                     // keep this 
         // console.log("data/csvData/" + pickCsvB + "/"+ pickDateB2 +"-candidate.csv");
-    d3.csv("data/csvData/" + pickCsvB + "/" + pickDateB1 + "-constituency.csv").then(makeConstituencyB1),
-    d3.csv("data/csvData/" + pickCsvB + "/"+ pickDateB1 +"-candidate.csv").then(makeCandidateB1);
-
-    d3.csv("data/csvData/" + pickCsvB + "/" + pickDateB2 + "-constituency.csv").then(makeConstituencyB2),
-    d3.csv("data/csvData/" + pickCsvB + "/"+ pickDateB2 +"-candidate.csv").then(makeCandidateB2);
+    if ($('input[id="extraCompareSwitch"]').is(":checked")){
+        d3.csv("data/csvData/" + pickCsvB + "/" + pickDateB1 + "-constituency.csv").then(makeConstituencyB1),
+        d3.csv("data/csvData/" + pickCsvB + "/"+ pickDateB1 +"-candidate.csv").then(makeCandidateB1);
+        d3.csv("data/csvData/" + pickCsvB + "/" + pickDateB2 + "-constituency.csv").then(makeConstituencyB2),
+        d3.csv("data/csvData/" + pickCsvB + "/"+ pickDateB2 +"-candidate.csv").then(makeCandidateB2);
+    } else {
+        d3.csv("data/csvData/" + pickCsvB + "/" + pickDateB1 + "-constituency.csv").then(makeConstituencyB1),
+        d3.csv("data/csvData/" + pickCsvB + "/"+ pickDateB1 +"-candidate.csv").then(makeCandidateB1);
+    };
  });
 
 function makeConstituencyA1(data){
