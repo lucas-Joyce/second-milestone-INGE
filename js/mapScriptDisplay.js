@@ -51,7 +51,7 @@ function createSVGmap() { // <----- leave this part alone
                 .append("svg")
                 .attr("width", width)
                 .attr("height", height);
-        d3.json("data/mapData/westminster.json").then(function( UKdata ){
+        d3.json("data/mapData/uk.json").then(function( UKdata ){
         var shires = topojson.feature(UKdata, UKdata.objects.Westminster_Parliamentary_Constituencies__December_2017__UK_BSC);
         var svgUKmap = svgUK.append("g").attr("class","svgUKmap");
                 

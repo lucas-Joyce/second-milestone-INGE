@@ -266,15 +266,29 @@ $('input[id="inputPhilDisplayB"]').click(function() {
     });
 
     $('input:checkbox[class="electionButtonA"]').on("click", function() {
-    if ($('input:checkbox[name="countryA"]').is(":checked") ||
-        $('input:checkbox[name="electionA"]').is(":checked")) {
-        $("#finishButtonDisplay").slideDown(250);
-    } else {
-        $("#finishElectionListA1 > p").remove();
-        $("#finishElectionListA2 > p").remove();
-        $("#finishButtonDisplay").slideUp(250);
-    };
-});
+        if ($('input:checkbox[name="countryA"]').is(":checked") ||
+            $('input:checkbox[name="electionA"]').is(":checked")) {
+            $("#finishButtonDisplay").slideDown(250);
+        } else {
+            $("#finishElectionListA1 > p").remove();
+            $("#finishElectionListA2 > p").remove();
+            $("#finishElectionListB1 > p").remove();
+            $("#finishElectionListB2 > p").remove();
+            $("#finishButtonDisplay").slideUp(250);
+        };
+    });
+    $('input:checkbox[class="electionButtonB"]').on("click", function() {
+        if ($('input:checkbox[name="countryB"]').is(":checked") ||
+            $('input:checkbox[name="electionB"]').is(":checked")) {
+            $("#finishButtonDisplay").slideDown(250);
+        } else {
+            $("#finishElectionListA1 > p").remove();
+            $("#finishElectionListA2 > p").remove();
+            $("#finishElectionListB1 > p").remove();
+            $("#finishElectionListB2 > p").remove();
+            $("#finishButtonDisplay").slideUp(250);
+        };
+    });
 /* ========== if selected checkbox allow only 2 per election per country =========== */
 
 // for removing and displaying end result labels
@@ -346,15 +360,18 @@ $('input[name="electionB"]').click(function () {
     var secondBoxB = 2;
     var eaLen = $("input[name='electionB']:checked").length;
     var box = ("<p>" + ($(this).val()) + "</p>");
-    if (eaLen === secondBoxB) {
-        $(this).prop("checked", true);
+    if (eaLen === firstBoxB) {
+        if($(this).is(":checked")){
+            $("#finishElectionListB1").append(box);
+            //console.log("first-hello");
+        }
+        if(!$(this).is(":checked")){
+            $("#finishElectionListB2 > p").remove();
+            //console.log("removed");
+        }
+    } else if (eaLen === secondBoxB) { 
         $("#finishElectionListB2 > p").remove();
         $("#finishElectionListB2").append(box);
-    } else if (eaLen === firstBoxB) {
-        $(this).prop(":checked", true); 
-        $("#finishElectionListB1 > p").remove();
-        $("#finishElectionListB2 > p").remove();
-        $("#finishElectionListB1").append(box);
     } //else {                                      //// this is not needed.
         // $("#finishElectionListB1 > p").remove();
         // $("#finishElectionListB2 > p").remove();
@@ -386,13 +403,14 @@ $("input[name='electionB']").click("click", function() {
 
     if ($('input[id="extraCompareSwitch"]').is(":checked")){
         if (EB > max2) { 
-            $("input[name='electionB']:checked").prop("checked", "");
+            $(this).prop("checked","");
             alert('You can only select ' + max2 + ' options!!');
         };
     } else {
         if (EB > max1) { 
-            $("input[name='electionB']:checked").prop("checked", "");
+            $(this).prop("checked","");
             alert('You can only select ' + max1 + ' options!!');
+            $("#finishElectionListB2 > p").remove();
         };
     };
 });
