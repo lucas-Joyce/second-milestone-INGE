@@ -52,25 +52,7 @@ function createSVGmap() { // <----- leave this part alone
                 .attr("width", width)
                 .attr("height", height);
         d3.json("data/mapData/westminsteratwgs84.json").then(function( UKdata ){
-         var shires = topojson.feature(UKdata, UKdata.objects.Westminster_Parliamentary_Constituencies__December_2017__UK_BSC);
- 
-         //     d3.csv(GE2019consititunecy).then( function( csvUkData ){
-        //                             //console.log( csvUkData);
-        //         shires.features.forEach( function (e, i){
-        //             csvUkData.forEach(function(f, j) {
-        //             if (e.properties.PCON17NM !== f.constituency_name ) {
-        //                  return null;
-        //             }
-        //             //shires.features = csvUkData[i].result 
-        //             //var thisUk = csvUkData[i].result;
-        //             //console.log(csvUkData[i].result);
-        //             //console.log(shires.features[i].properties)
-        //         //console.log(f.constituency_name, f.result );
-        //         //  });
-        // //     });
-        // // });
-        //ukDataSet();
-         
+        var shires = topojson.feature(UKdata, UKdata.objects.Westminster_Parliamentary_Constituencies__December_2017__UK_BSC);
         var svgUKmap = svgUK.append("g").attr("class","svgUKmap");
                 
         svgUKmap.selectAll("path")
