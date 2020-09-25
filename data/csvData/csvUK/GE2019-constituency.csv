@@ -298,7 +298,7 @@ E14000760,E12000007,Ilford South,London,London,England,Borough,13/12/2019 04:32,
 S14000038,S92000003,Inverclyde,Scotland,Scotland,Scotland,County,13/12/2019 02:32,Ronnie,Cowan,Male,SNP hold,SNP,Lab,60622,39903,125,7512,6265,11783,2560,0,0,19295,0,0,0,0,0,0,0,0
 S14000039,S92000003,"Inverness, Nairn, Badenoch and Strathspey",Scotland,Scotland,Scotland,County,13/12/2019 05:00,Drew,Hendry,Male,SNP hold,SNP,Con,78059,54810,112,10440,15807,4123,5846,1078,1709,26247,0,0,0,0,0,0,0,0
 E14000761,E12000006,Ipswich,Suffolk,East,England,Borough,13/12/2019 02:48,Tom,Hunt,Male,Con gain from Lab,Con,Lab,75525,49579,116,5479,24952,19473,2439,1432,1283,0,0,0,0,0,0,0,0,0
-E14000762,E12000008,Isle Of Wight,Isle of Wight,South East,England,County,13/12/2019 04:03,Bob,Seely,Male,Con hold,Con,Lab,113021,74442,247,23737,41815,18078,0,0,11338,0,0,0,0,0,0,0,3211,0
+E14000762,E12000008,Isle of Wight,Isle of Wight,South East,England,County,13/12/2019 04:03,Bob,Seely,Male,Con hold,Con,Lab,113021,74442,247,23737,41815,18078,0,0,11338,0,0,0,0,0,0,0,3211,0
 E14000763,E12000007,Islington North,London,London,England,Borough,13/12/2019 03:18,Jeremy,Corbyn,Male,Lab hold,Lab,LD,75162,53805,227,26188,5483,34603,8415,742,4326,0,0,0,0,0,0,0,236,0
 E14000764,E12000007,Islington South and Finsbury,London,London,England,Borough,13/12/2019 03:05,Emily,Thornberry,Female,Lab hold,Lab,LD,70489,47816,171,17328,8045,26897,9569,1136,1987,0,0,0,0,0,0,0,182,0
 W07000077,W92000004,Islwyn,Gwent and Mid Glamorgan,Wales,Wales,County,13/12/2019 02:01,Chris,Evans,Male,Lab hold,Lab,Con,55423,34350,145,5464,9892,15356,1313,4834,669,0,2286,0,0,0,0,0,0,0
@@ -546,9 +546,9 @@ E14000964,E12000009,St Ives,Cornwall,South West,England,County,13/12/2019 14:52,
 E14000969,E12000002,Stockport,Greater Manchester,North West,England,Borough,13/12/2019 03:08,Navendu,Mishra,Male,Lab hold,Lab,Con,65391,41715,145,10039,11656,21695,5043,1918,1403,0,0,0,0,0,0,0,0,0
 E14000970,E12000001,Stockton North,Cleveland,North East,England,Borough,13/12/2019 02:08,Alex,Cunningham,Male,Lab hold,Lab,Con,66649,41156,116,1027,16701,17728,1631,3907,0,0,0,0,0,0,0,0,1189,0
 E14000971,E12000001,Stockton South,Cleveland,North East,England,Borough,13/12/2019 02:33,Matt,Vickers,Male,Con gain from Lab,Con,Lab,76870,54802,142,5260,27764,22504,2338,2196,0,0,0,0,0,0,0,0,0,0
-E14000972,E12000005,Stoke-On-Trent Central,Staffordshire,West Midlands,England,Borough,13/12/2019 04:25,Jo,Gideon,Female,Con gain from Lab Coop,Con,Lab,55419,32070,67,670,14557,13887,1116,1691,819,0,0,0,0,0,0,0,0,0
-E14000973,E12000005,Stoke-On-Trent North,Staffordshire,West Midlands,England,Borough,13/12/2019 04:30,Jonathan,Gullis,Male,Con gain from Lab,Con,Lab,68298,40134,96,6286,20974,14688,1268,2374,508,0,0,0,0,0,0,0,322,0
-E14000974,E12000005,Stoke-On-Trent South,Staffordshire,West Midlands,England,Borough,13/12/2019 04:35,Jack,Brereton,Male,Con hold,Con,Lab,64491,39604,171,11271,24632,13361,1611,0,0,0,0,0,0,0,0,0,0,0
+E14000972,E12000005,Stoke-on-Trent Central,Staffordshire,West Midlands,England,Borough,13/12/2019 04:25,Jo,Gideon,Female,Con gain from Lab Coop,Con,Lab,55419,32070,67,670,14557,13887,1116,1691,819,0,0,0,0,0,0,0,0,0
+E14000973,E12000005,Stoke-on-Trent North,Staffordshire,West Midlands,England,Borough,13/12/2019 04:30,Jonathan,Gullis,Male,Con gain from Lab,Con,Lab,68298,40134,96,6286,20974,14688,1268,2374,508,0,0,0,0,0,0,0,322,0
+E14000974,E12000005,Stoke-on-Trent South,Staffordshire,West Midlands,England,Borough,13/12/2019 04:35,Jack,Brereton,Male,Con hold,Con,Lab,64491,39604,171,11271,24632,13361,1611,0,0,0,0,0,0,0,0,0,0,0
 E14000975,E12000005,Stone,Staffordshire,West Midlands,England,County,13/12/2019 03:54,William,Cash,Male,Con hold,Con,Lab,69378,49843,222,19945,31687,11742,4412,0,2002,0,0,0,0,0,0,0,0,0
 E14000976,E12000005,Stourbridge,West Midlands,West Midlands,England,Borough,13/12/2019 04:53,Suzanne,Webb,Female,Con hold,Con,Lab,69891,45689,142,13571,27534,13963,2523,0,1048,0,0,0,0,0,0,0,621,0
 N06000016,N92000002,Strangford,Northern Ireland,Northern Ireland,Northern Ireland,County,13/12/2019 01:56,Jim,Shannon,Male,DUP hold,DUP,Alliance,66928,37485,175,7071,1476,0,0,0,790,0,0,17705,555,1994,4023,10634,308,0
@@ -587,8 +587,8 @@ E14001005,E12000007,Twickenham,London,London,England,Borough,13/12/2019 02:54,Mu
 E14001006,E12000001,Tynemouth,Tyne and Wear,North East,England,Borough,13/12/2019 02:10,Alan,Campbell,Male,Lab hold,Lab,Con,77261,56034,179,4857,22071,26928,3791,1963,1281,0,0,0,0,0,0,0,0,0
 N06000017,N92000002,Upper Bann,Northern Ireland,Northern Ireland,Northern Ireland,County,13/12/2019 04:44,Carla,Lockhart,Female,DUP hold,DUP,SF,82887,50045,303,8210,0,0,0,0,0,0,0,20501,12291,4623,6197,6433,0,0
 E14001007,E12000007,Uxbridge and South Ruislip,London,London,England,Borough,13/12/2019 03:40,Boris,Johnson,Male,Con hold,Con,Lab,70365,48187,93,7210,25351,18141,3026,0,1090,0,0,0,0,0,0,0,579,0
-W07000060,W92000004,Vale Of Clwyd,Clwyd,Wales,Wales,County,13/12/2019 01:46,James,Davies,Male,Con gain from Lab,Con,Lab,56649,37213,84,1827,17270,15443,1471,1477,0,0,1552,0,0,0,0,0,0,0
-W07000078,W92000004,Vale Of Glamorgan,South Glamorgan,Wales,Wales,County,13/12/2019 02:02,Alun,Cairns,Male,Con hold,Con,Lab,76508,54807,294,3562,27305,23743,0,0,3251,0,0,0,0,0,0,0,508,0
+W07000060,W92000004,Vale of Clwyd,Clwyd,Wales,Wales,County,13/12/2019 01:46,James,Davies,Male,Con gain from Lab,Con,Lab,56649,37213,84,1827,17270,15443,1471,1477,0,0,1552,0,0,0,0,0,0,0
+W07000078,W92000004,Vale of Glamorgan,South Glamorgan,Wales,Wales,County,13/12/2019 02:02,Alun,Cairns,Male,Con hold,Con,Lab,76508,54807,294,3562,27305,23743,0,0,3251,0,0,0,0,0,0,0,508,0
 E14001008,E12000007,Vauxhall,London,London,England,Borough,13/12/2019 04:14,Florence,Eshalomi,Female,Lab hold,Lab,LD,88659,56333,236,19612,9422,31615,12003,641,2516,0,0,0,0,0,0,0,136,0
 E14001009,E12000003,Wakefield,West Yorkshire,Yorkshire and The Humber,England,County,13/12/2019 03:40,Imran,Ahmad Khan,Male,Con gain from Lab,Con,Lab,70192,45027,137,3358,21283,17925,1772,2725,0,0,0,0,0,0,0,0,1322,0
 E14001010,E12000002,Wallasey,Merseyside,North West,England,Borough,13/12/2019 02:58,Angela,Eagle,Female,Lab hold,Lab,Con,66310,46492,102,18322,11579,29901,1843,2037,1132,0,0,0,0,0,0,0,0,0

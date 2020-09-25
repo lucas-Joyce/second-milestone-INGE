@@ -9,7 +9,7 @@ var phlA = $("#inputPhilDisplayA").val();
 var ukB  = $("#inputUkDisplayB").val();
 var usaB = $("#inputUsaDisplayB").val();
 var phlB = $("#inputPhilDisplayB").val();
-
+//console.log(ukA);
 var ukCheckA = $("#inputUkDisplayA").is(":checked");
 var ukCheckB = $("#inputUkDisplayB").is(":checked");
 var usaCheckA = $("#inputUsaDisplayA").is(":checked");
@@ -59,8 +59,8 @@ $(".electionButtonA").click(function(){
     // console.log(pickDateA1);
     // console.log(pickDateA2);
 
-        // console.log("data/csvData/" + pickCsvA + "/"+ pickDateA1 +"-constituency.csv");                     // keep this 
-        // console.log("data/csvData/" + pickCsvA + "/"+ pickDateA1 +"-candidate.csv");
+         //console.log("data/csvData/" + pickCsvA + "/"+ pickDateA1 +"-constituency.csv");                     // keep this 
+         //console.log("data/csvData/" + pickCsvA + "/"+ pickDateA1 +"-candidate.csv");
         // console.log("data/csvData/" + pickCsvA + "/"+ pickDateA2 +"-constituency.csv");                     // keep this 
         // console.log("data/csvData/" + pickCsvA + "/"+ pickDateA2 +"-candidate.csv");
     if ($('input[id="extraCompareSwitch"]').is(":checked")){
@@ -105,35 +105,8 @@ $(".electionButtonB").click(function(){
         d3.csv("data/csvData/" + pickCsvB + "/"+ pickDateB1 +"-candidate.csv").then(makeCandidateB1);
     };
  });
-
-function makeConstituencyA1(data){
-    console.log("makeConstituencyA1");
+ //console.log(onThis.attr("shires"));
 };
-function makeCandidateA1(data){
-    console.log("makeCandidateA1");
-};
-function makeConstituencyA2(data){
-    console.log("makeConstituencyA2");
-};
-function makeCandidateA2(data){
-    console.log("makeCandidateA2");
-};
-
-
-function makeConstituencyB1(data){
-    console.log("makeConstituencyB1");
-};
-function makeCandidateB1(data){
-    console.log("makeCandidateB1");
-};
-function makeConstituencyB2(data){
-    console.log("makeConstituencyB2");
-};
-function makeCandidateB2(data){
-    console.log("makeCandidateB2");
-};
-
-};// //console.log(pickCountry);
 
 
 

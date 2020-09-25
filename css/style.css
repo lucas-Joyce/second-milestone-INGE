@@ -80,46 +80,69 @@
 /************************************/
 body {
   background-image: url("../images/manila.jpg");
-  /* background-color: transparent;
+  background-color: transparent;
   background-size: contain;
   background-repeat: repeat-x;
   background-position-x: center;
-  background-position-y: -120px;
-  z-index: -2; */
+  background-position-y: 0px;
+  /*z-index: -2;*/ 
+  height:98vh;
+  /* overflow-y: hidden; */
 }
 nav {
   background-color: transparent;/*#202020 */
-  height: 40px;
+  height: 34px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-section {
-  /*display:none;*/
+.nav {
+  background-color: transparent;/*#202020 */
+  float: none;
+  /* padding-right: 5px;
+  padding-left: 5px; */
+}
+.content {
+  display: flex;
+  overflow-y: hidden;
+  /* height: 95vh; */
+}
+/*.displayColumn {
+   background-color: cadetblue; 
+  padding-left: 8px;
+}*/
+
+/* section {
+  /*display:none;
   height: 92vh;
-}
+} */
 .displayAtabs {
   background-color: transparent;/*#202020 */
+  padding-right: 8px;
+  padding-left: 8px;
 }
 .mainMapDisplayA {
   background-color: #5f9ea09c;
-  /*height: 50vh;*/
+  height: 89vh;  
   width: -webkit-fill-available;
 }
 .displayBtabs {
   display: block;
-  /*height: 42vh;*/
 }
 .displayB {
-  background-color: #9932cc;
+  background-color: #5f9ea09c;
   display: flex;
   align-items: stretch;
-  height: 35vh;
+  /*height: 35vh;*/
   padding-left: 0px;
   padding-right: 0px;
   /* display: none; */
 }
 .mainChartDisplayBleft {
-  background-color: #00ffff;
+  background-color: #ddf3f3;
   display: flex;
-  align-items: stretch;
+  /*align-items: stretch;*/
 }
 .mainChartDisplayBright {
   background-color: #008b8b;
@@ -130,8 +153,7 @@ section {
   transform: rotate(90deg);
   background-position: top;
   background-size: cover;*/
-  height: 92vh;
-  float: right;
+  height: 34vh;
   position: relative;
   overflow: hidden;
 }
@@ -152,10 +174,11 @@ section {
 
 /* **************** TABS *************** */
 .nav-tabs>li>a {
-background-color: #5f9ea066
+background-color: #5f9ea066;
+margin-right: -1px;
 }
 .nav>li>a {
-  padding: 4px 15px;
+  padding: 5px 10px;
 }
 .nav>li>a:hover {
 background-color: #647677;
@@ -163,6 +186,13 @@ background-color: #647677;
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   color: #555;
   background-color: #5f9ea0;
+}
+.list-inline {
+  margin-left: auto;
+  margin-right: auto;
+}
+.list-inline>li {
+  padding-left: 0px;
 }
 /* ***************** CARDS *************** */ 
 #containerDisplay {
@@ -194,6 +224,7 @@ background-color: #647677;
   margin: 10px;
   padding: 20px;
   min-height: 150px;
+  border-radius: 8px;
 }
 .asteriskflex {
   display: flex;
@@ -206,12 +237,45 @@ background-color: #647677;
  
 
 #Nor {
-  /*width: 800px;
-  height: 1000px;*/
   background-color: transparent;
-  margin: 8px;
+  padding: 8px;
+  height:97%; 
 }
+/* .svgUKmap {
+  float: left;
+} */
   ul {
     list-style-type: none;
 }
+.chart-container {
+  padding: 8px; /*auto*/
+}
 
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 126%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+svg .rect {
+  fill: transparent;
+  stroke: steelblue;
+  stroke-width: 5px;
+}
+/* ========================================================= Mini-Tablet and ipad ======*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .content {
+    display: block;
+    /* height: 95vh; */
+  }
+}
