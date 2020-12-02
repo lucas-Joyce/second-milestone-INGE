@@ -108,29 +108,31 @@ nav {
   overflow-y: hidden;
   /* height: 95vh; */
 }
-/*.displayColumn {
-   background-color: cadetblue; 
+.displayColumn { 
   padding-left: 8px;
-}*/
-
-/* section {
-  /*display:none;
-  height: 92vh;
-} */
-.displayAtabs {
-  background-color: transparent;/*#202020 */
   padding-right: 8px;
-  padding-left: 8px;
 }
-.mainMapDisplayA {
+
+.displaytabs {
+  padding-right: 0px;
+  padding-left: 0px;
+} 
+.tab-content { /*mainMapDisplayA*/
+  background-color: #5f9ea09c;
+  /* height: 89vh;   */
+  width: -webkit-fill-available;
+}
+/* .mainMapDisplayB {             // <== need 2nd map to be displayed
   background-color: #5f9ea09c;
   height: 89vh;  
   width: -webkit-fill-available;
-}
-.displayBtabs {
+} */
+
+/* .displayBtabs {
   display: block;
-}
-.displayB {
+} */
+
+.displayBgc {
   background-color: #5f9ea09c;
   display: flex;
   align-items: stretch;
@@ -139,6 +141,28 @@ nav {
   padding-right: 0px;
   /* display: none; */
 }
+#Natonal, #Local {
+  height: 35vh;
+  /*display: none;*/
+}
+
+
+/*======================== */
+/* .grid .tick {
+  stroke: lightgrey;
+  opacity: 0.7;
+}
+.grid path {
+    stroke-width: 0;
+} */
+/* line{
+  fill: none;
+  stroke: blue;
+  stroke-width: 2px;
+} */
+/*======================== */
+
+
 .mainChartDisplayBleft {
   background-color: #ddf3f3;
   display: flex;

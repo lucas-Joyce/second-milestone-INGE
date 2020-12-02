@@ -104,34 +104,49 @@
         </div>
     </nav>
     <section class="content">
-        <div class="displayAtabs col-md-7">
+        <div class="displayColumn col-md-7">
             <ul class="nav nav-tabs list-inline col-md-12">
-                <!-- list-inline this is a tab for display A-->
                 <li class="active"><a data-toggle="tab" href="#Nor">Normal map</a></li>
                 <li><a data-toggle="tab" href="#Hex">Hexagonal map</a></li>
                 <li><a data-toggle="tab" href="#Box">Box map</a></li>
                 <li><a data-toggle="tab" href="#Seat">Seat-Box map</a></li>
                 <li><a data-toggle="tab" href="#Tree">Tree-Box map</a></li>
             </ul>
-            <div class="tab-content mainMapDisplayA col-md-12">
-                <div id="Nor" class="tab-pane fade in active"><!--<text class="label">map place here</text>--></div>
+            <div class="tab-content col-md-12">
+                <div id="Nor" class="tab-pane fade in active"></div>
                 <div id="Hex" class="tab-pane fade"></div>
                 <div id="Box" class="tab-pane fade"></div>
                 <div id="Seat" class="tab-pane fade"></div>
                 <div id="Tree" class="tab-pane fade"></div>
             </div>
         </div>
-        <div class="displayColumn" >
-            <div class="mainAutoDisplayC">Display Box C <br>(Diverging Bar Chart)</div>
-            <div class="displayBtabs">
+        <div class="displayColumn" > <!-- col-md-5 to be add with col-md-12 interactive -->
+            <div class="displaytabs col-md-12">
                 <ul class="nav nav-tabs list-inline">
-                    <!-- this is a Tabs for display B-->
-                    <li class="active"><a data-toggle="tab" href="#ConstituencyA1andA2">Bar Chart</a></li>
+                    <li class="active"><a data-toggle="tab" href="#Natonal">Natonal</a></li>
+                    <li><a data-toggle="tab" href="#Local">Local</a></li>
+                </ul>
+                <div class="tab-content displayBgc">
+                    <div class="chart-container col-md-12">
+                        <div id="Natonal" class="tab-pane fade in active col-md-12">
+                            <div id="resultAfter" class="displayColumn col-md-6"></div> <!-- should not be id here but in JS "append" -->
+                            <div id="shareAfter" class="displayColumn col-md-6"></div> <!-- should not be id here but in JS "append" -->
+                        </div>
+                        <div id="Local" class="tab-pane fade col-md-12">
+                            <div class="displayColumn col-md-6"></div>
+                            <div class="displayColumn col-md-6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="displaytabs col-md-12">
+                <ul class="nav nav-tabs list-inline">
+                    <li class="active"><a data-toggle="tab" href="#CandidateA1andA2">Bar Chart</a></li>
                     <li><a data-toggle="tab" href="#dough">Half-Doughnut</a></li>
                     <li><a data-toggle="tab" href="#barChart">pie Chart</a></li>
                 </ul>
-                <div class="displayB col-md-12">
-                    <div class="chart-container" ><!-- style="position: relative; height:30vh; width:60vw" -->
+                <div class="displayBgc col-md-12">
+                    <div class="tab-content chart-container"> <!-- style="position: relative; height:30vh; width:60vw" -->
                         <!--<canvas id="ConstituencyA1andA2" width="800" height="800" class="mainChartDisplayBleft col-md-6 tab-pane fade in active" aria-label="bar-chart" role="img"></canvas>-->
                         <div id="CandidateA1andA2" class="tab-pane fade in active" > <!--  width="700" height="700" --><!--col-md-6  mainChartDisplayBleft -->
                             <div id="recttooltip"></div>
